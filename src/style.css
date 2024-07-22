@@ -1,0 +1,10 @@
+/* src/style.css */
+.frame-landing-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.frame-landing-page div,
+.frame-landing-page button {
+  margin: 10px 0;
+}
