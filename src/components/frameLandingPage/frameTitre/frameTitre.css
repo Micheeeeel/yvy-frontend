@@ -1,0 +1,8 @@
+.frame-titre {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre le contenu verticalement (donc horizontalement puisqu'on est en mode vertical)*/
+  justify-content: center; /* centre le contenu horizontalement (donc verticalement puisqu'on est en mode vertical)*/
+  gap: 20px;
+  position: relative; /* Positionné selon le flux normal du document */
+}

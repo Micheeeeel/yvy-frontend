@@ -4,7 +4,7 @@ const FrameTitre = () => {
   return (
     <div className="frame-titre">
       {/* Placeholder pour le logo */}
-      <div className="frame-titre-logo-placeholder">LOGO</div>
+      <div className="frame-titre-logo">LOGO</div>
 
       {/* Placeholder pour le titre */}
       <h1 className="frame-titre-title">Titre de l Application</h1>
