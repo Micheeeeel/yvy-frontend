@@ -6,3 +6,14 @@
   gap: 20px;
   position: relative; /* Positionné selon le flux normal du document */
 }
+
+.frame-titre-logo {
+  width: 203px; /* Ajustez cette valeur selon vos besoins */
+  height: auto; /* Pour conserver les proportions de l'image */
+  margin-bottom: 20px; /* As per the auto layout settings */
+}
+
+.frame-titre-title {
+  font-size: 65px; /* Ajustez cette valeur selon vos besoins */
+  font-weight: 381px; /* Bold */
+}

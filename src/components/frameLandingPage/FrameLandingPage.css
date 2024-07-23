@@ -21,7 +21,7 @@
   gap: 10px;
   height: 2572px;
   overflow: hidden;
-  padding: 80px 0px !important; /* utiliser de important pour écraser le padding du selecteur universel qui suit*/
+  padding: 80px 0px; /* utiliser de important pour écraser le padding du selecteur universel qui suit*/
   position: absolute; /* Positionné par rapport au conteneur parent */
   left: 0;
   top: 0;
@@ -31,7 +31,5 @@
 .frame-landing-page * {
   /* l'étoile signifie "tous les éléments enfants", c'est un selecteur universel*/
   border: 2px solid white; /* Bordure blanche pour tous les enfants */
-  padding: 10px; /* Facultatif : Ajouter du padding pour mieux voir la bordure */
-  margin: 10px; /* Facultatif : Ajouter de la marge pour mieux voir la bordure */
   box-sizing: border-box; /* Pour inclure la bordure et le padding dans les dimensions des éléments */
 }
