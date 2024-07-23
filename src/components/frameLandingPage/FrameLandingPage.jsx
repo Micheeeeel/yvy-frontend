@@ -1,5 +1,5 @@
 import React from "react";
-import FrameTitre from "../FrameTitre";
+import FrameTitre from "./frameTitre/FrameTitre";
 import ImagePresentation from "../ImagePresentation";
 import CardLinesDesktop from "../CardLinesDesktop";
 import IconComponentNode from "../IconComponentNode";

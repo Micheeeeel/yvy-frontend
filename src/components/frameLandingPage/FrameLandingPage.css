@@ -27,3 +27,11 @@
   top: 0;
   width: 1440px;
 }
+
+.frame-landing-page * {
+  /* l'étoile signifie "tous les éléments enfants", c'est un selecteur universel*/
+  border: 2px solid white; /* Bordure blanche pour tous les enfants */
+  padding: 10px; /* Facultatif : Ajouter du padding pour mieux voir la bordure */
+  margin: 10px; /* Facultatif : Ajouter de la marge pour mieux voir la bordure */
+  box-sizing: border-box; /* Pour inclure la bordure et le padding dans les dimensions des éléments */
+}
