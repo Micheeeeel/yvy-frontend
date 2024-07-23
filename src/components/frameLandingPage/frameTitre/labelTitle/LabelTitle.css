@@ -1,0 +1,14 @@
+.label_title {
+  height: 65px;
+  width: 381px;
+}
+
+.label_title .titre {
+  color: #fffffe;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 0;
+  position: relative;
+  white-space: nowrap; /* so that the title text doesn't wrap */
+}

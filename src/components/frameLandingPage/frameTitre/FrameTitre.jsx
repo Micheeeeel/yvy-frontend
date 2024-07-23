@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as Logo } from "../../../assets/logo.svg";
 import "./FrameTitre.css";
+import { LabelTitle } from "./labelTitle/LabelTitle";
 
 const FrameTitre = () => {
   return (
@@ -9,11 +10,12 @@ const FrameTitre = () => {
       <Logo className="frame-titre-logo" />
 
       {/* Placeholder pour le titre */}
-      <h1 className="frame-titre-title">YVY DRONE</h1>
+      <LabelTitle />
 
       {/* Placeholder pour la phrase descriptive */}
       <p className="frame-titre-description">
-        Une phrase décrivant le but de l application.
+        Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+        libero et velit interdum, ac aliquet odio mattis.
       </p>
     </div>
   );
