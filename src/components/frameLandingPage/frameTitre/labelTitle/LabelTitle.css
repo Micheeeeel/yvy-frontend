@@ -1,6 +1,9 @@
 .label_title {
   height: 65px;
   width: 381px;
+  display: flex; /* Utiliser flexbox pour centrer verticalement */
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement si nécessaire */
 }
 
 .label_title .titre {

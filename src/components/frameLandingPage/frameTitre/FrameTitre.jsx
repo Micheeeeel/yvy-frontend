@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as Logo } from "../../../assets/logo.svg";
 import "./FrameTitre.css";
 import { LabelTitle } from "./labelTitle/LabelTitle";
+import { LabelTitleText } from "./labelTitleText/LabelTitleText";
 
 const FrameTitre = () => {
   return (
@@ -13,10 +14,7 @@ const FrameTitre = () => {
       <LabelTitle />
 
       {/* Placeholder pour la phrase descriptive */}
-      <p className="frame-titre-description">
-        Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-        libero et velit interdum, ac aliquet odio mattis.
-      </p>
+      <LabelTitleText />
     </div>
   );
 };
