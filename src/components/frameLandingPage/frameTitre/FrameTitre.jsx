@@ -3,6 +3,7 @@ import { ReactComponent as Logo } from "../../../assets/logo.svg";
 import "./FrameTitre.css";
 import { LabelTitle } from "./labelTitle/LabelTitle";
 import { LabelTitleText } from "./labelTitleText/LabelTitleText";
+import Line from "./line/Line";
 
 const FrameTitre = () => {
   return (
@@ -15,6 +16,7 @@ const FrameTitre = () => {
 
       {/* Placeholder pour la phrase descriptive */}
       <LabelTitleText />
+      <Line />
     </div>
   );
 };

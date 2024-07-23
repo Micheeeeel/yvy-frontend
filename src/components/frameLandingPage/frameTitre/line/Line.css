@@ -1,0 +1,5 @@
+/* src/components/Line.css */
+.line-element {
+  stroke: var(--primary);
+  stroke-width: 2;
+}
