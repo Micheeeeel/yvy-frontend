@@ -1,5 +1,5 @@
 import React from "react";
-import "./FrameTitre.css";
+//import "./FrameTitre.css";
 import { LabelTitle } from "./labelTitle/LabelTitle";
 import { LabelTitleText } from "./labelTitleText/LabelTitleText";
 import Line from "./line/Line";
