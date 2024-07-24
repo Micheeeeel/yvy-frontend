@@ -1,7 +1,7 @@
 import React from "react";
 import "./LabelTitle.css";
 
-export const LabelTitle = () => {
+const LabelTitle = () => {
   return (
     <div className="label_title">
       {/* <div className="titre">YYY DRONE</div> */}
@@ -9,3 +9,5 @@ export const LabelTitle = () => {
     </div>
   );
 };
+
+export default LabelTitle;

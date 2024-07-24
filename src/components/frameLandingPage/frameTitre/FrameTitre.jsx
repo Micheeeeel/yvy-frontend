@@ -1,7 +1,7 @@
 import React from "react";
 //import "./FrameTitre.css";
-import { LabelTitle } from "./labelTitle/LabelTitle";
-import { LabelTitleText } from "./labelTitleText/LabelTitleText";
+import LabelTitle from "./labelTitle/LabelTitle";
+import LabelTitleText from "./labelTitleText/LabelTitleText";
 import Line from "./line/Line";
 import Logo from "./logo/Logo";
 

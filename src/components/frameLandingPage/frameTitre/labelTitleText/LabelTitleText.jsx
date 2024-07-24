@@ -1,7 +1,7 @@
 import React from "react";
 import "./LabelTitleText.css";
 
-export const LabelTitleText = () => {
+const LabelTitleText = () => {
   return (
     <div className="label">
       <p className="text-wrapper">
@@ -11,3 +11,5 @@ export const LabelTitleText = () => {
     </div>
   );
 };
+
+export default LabelTitleText;
