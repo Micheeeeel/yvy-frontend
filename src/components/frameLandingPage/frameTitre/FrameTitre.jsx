@@ -1,5 +1,4 @@
 import React from "react";
-import "./frameTitre.css";
 import LabelTitle from "./labelTitle/LabelTitle";
 import LabelTitleText from "./labelTitleText/LabelTitleText";
 import Line from "./line/Line";
@@ -7,7 +6,9 @@ import Logo from "./logo/Logo";
 
 const FrameTitre = () => {
   return (
-    <div className="frame-titre">
+    <div class="flex flex-col items-center gap-5 relative">
+      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+
       {/* Placeholder pour le logo */}
       <Logo />
 
