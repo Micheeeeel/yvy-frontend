@@ -1,6 +1,7 @@
 // src/App.js
 import React from "react";
 import FrameLandingPage from "./components/frameLandingPage/FrameLandingPage";
+import "./index.css";
 import "./App.css";
 
 function App() {
