@@ -3,10 +3,9 @@ import "./LabelTitle.css";
 
 const LabelTitle = () => {
   return (
-    <div className="label_title">
-      {/* <div className="titre">YYY DRONE</div> */}
-      <h1 className="titre">YYY DRONE</h1>
-    </div>
+    <h1 className=" font-inter font-bold text-[64px] whitespace-nowrap ">
+      YVY DRONE
+    </h1>
   );
 };
 
