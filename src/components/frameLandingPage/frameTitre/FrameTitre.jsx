@@ -7,8 +7,6 @@ import Logo from "./logo/Logo";
 const FrameTitre = () => {
   return (
     <div class="flex flex-col items-center gap-5 ">
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-
       {/* Placeholder pour le logo */}
       <Logo />
 
