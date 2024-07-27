@@ -1,17 +1,15 @@
-// src/components/Line.jsx
 import React from "react";
-import "./Line.css";
 
 const Line = () => {
   return (
     <svg
-      width="300"
-      height="2"
-      viewBox="0 0 300 2"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      width="300" // Définit la largeur du SVG à 300 pixels
+      height="2" // Définit la hauteur du SVG à 2 pixels
+      viewBox="0 0 300 2" // Définit la vue du SVG à 0 0 300 2
+      fill="none" // Ne remplit pas le SVG
+      xmlns="http://www.w3.org/2000/svg" // Définit l'espace de noms XML pour les documents SVG. Il est nécessaire pour que les navigateurs comprennent que ce document est du type SVG.
     >
-      <line x1="0" y1="1" x2="300" y2="1" className="line-element" />
+      <line x1="0" y1="1" x2="300" y2="1" className="stroke-primary stroke-2" />
     </svg>
   );
 };

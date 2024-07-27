@@ -31,6 +31,6 @@
 /* for debugging */
 .frame-landing-page * {
   /* l'étoile signifie "tous les éléments enfants", c'est un selecteur universel*/
-  border: 2px solid white; /* Bordure blanche pour tous les enfants */
-  box-sizing: border-box; /* Pour inclure la bordure et le padding dans les dimensions des éléments */
+  /* border: 2px solid white; /* Bordure blanche pour tous les enfants */
+  /*box-sizing: border-box; /* Pour inclure la bordure et le padding dans les dimensions des éléments */
 }
