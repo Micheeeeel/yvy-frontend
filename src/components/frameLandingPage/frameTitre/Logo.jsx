@@ -4,7 +4,7 @@ import React from "react";
 const Logo = () => {
   return (
     <svg
-      className="frame-titre-logo w-[203px] h-auto mb-5"
+      className="frame-titre-logo w-[203px] h-auto "
       viewBox="0 0 745 240"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

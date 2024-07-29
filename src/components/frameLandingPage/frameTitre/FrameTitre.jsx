@@ -6,14 +6,9 @@ import Logo from "./Logo";
 
 const FrameTitre = () => {
   return (
-    <div className="flex flex-col items-center gap-5 text-white">
-      {/* Placeholder pour le logo */}
+    <div className="flex flex-col items-center gap-5 ">
       <Logo />
-
-      {/* Placeholder pour le titre */}
       <LabelTitle />
-
-      {/* Placeholder pour la phrase descriptive */}
       <LabelTitleText />
       <Line />
     </div>
