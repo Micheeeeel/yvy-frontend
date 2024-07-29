@@ -10,7 +10,7 @@
     --black
   ); /* Nous utiliserons une variable CSS pour la couleur de fond */
   /*tout les couleurs de text doivent être en blanc*/
-  color: white;
+  /* color: white; */
 }
 
 /* src/components/frameLandingPage/FrameLandingPage.css */

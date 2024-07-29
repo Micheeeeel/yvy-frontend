@@ -1,7 +1,7 @@
 import React from "react";
 
 const IconComponentNode = () => {
-  return <div>Icon Component Node</div>;
+  return <div className="text-white">Icon Component Node</div>;
 };
 
 export default IconComponentNode;

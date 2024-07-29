@@ -11,13 +11,12 @@ const FrameLandingPage = () => {
   return (
     <div className="frame-landing-page">
       <div className="landing-page">
-        <FrameTitre />
+        <FrameTitre className="text-white" />
         <ImagePresentation />
         <CardLinesDesktop />
         <IconComponentNode />
         <MyButton />
         <SignInCircle />
-        <button>My other Button</button>
       </div>
     </div>
   );

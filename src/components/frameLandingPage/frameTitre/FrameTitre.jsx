@@ -1,12 +1,12 @@
 import React from "react";
-import LabelTitle from "./labelTitle/LabelTitle";
-import LabelTitleText from "./labelTitleText/LabelTitleText";
-import Line from "./line/Line";
-import Logo from "./logo/Logo";
+import LabelTitle from "./LabelTitle";
+import LabelTitleText from "./LabelTitleText";
+import Line from "./Line";
+import Logo from "./Logo";
 
 const FrameTitre = () => {
   return (
-    <div class="flex flex-col items-center gap-5 ">
+    <div className="flex flex-col items-center gap-5 text-white">
       {/* Placeholder pour le logo */}
       <Logo />
 
