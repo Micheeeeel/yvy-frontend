@@ -1,10 +1,11 @@
 import React from "react";
 import FrameTitre from "./frameTitre/FrameTitre";
-import ImagePresentation from "../ImagePresentation";
-import CardLinesDesktop from "../CardLinesDesktop";
+import ImagePresentation from "./ImagePresentation";
+import CardLinesDesktop from "./CardLinesDesktop";
 import IconComponentNode from "../IconComponentNode";
 import MyButton from "../MyButton";
 import SignInCircle from "../SignInCircle";
+import LevelCard from "./levelCard/LevelCard";
 
 const FrameLandingPage = () => {
   return (
@@ -12,7 +13,8 @@ const FrameLandingPage = () => {
       <div className="flex flex-col items-center gap-5 w-[1440px] h-[2572px]  pt-20 pb-20 absolute  ">
         <FrameTitre />
         <ImagePresentation />
-        <CardLinesDesktop />
+        <CardLinesDesktop color="border-primary" />
+        <LevelCard />
         <IconComponentNode />
         <MyButton />
         <SignInCircle />
