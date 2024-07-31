@@ -2,9 +2,6 @@ import React from "react";
 import FrameTitre from "./frameTitre/FrameTitre";
 import ImagePresentation from "./ImagePresentation";
 import CardLinesDesktop from "./CardLinesDesktop";
-import IconComponentNode from "../IconComponentNode";
-import MyButton from "../MyButton";
-import SignInCircle from "../SignInCircle";
 import LevelCard from "./levelCard/LevelCard";
 
 const FrameLandingPage = () => {
@@ -14,10 +11,13 @@ const FrameLandingPage = () => {
         <FrameTitre />
         <ImagePresentation />
         <CardLinesDesktop color="border-primary" />
-        <LevelCard />
-        <IconComponentNode />
-        <MyButton />
-        <SignInCircle />
+        <div className="flex flex-wrap gap-x-[32px] gap-y-[32px] px-[32px] py-[32px] justify-center">
+          <LevelCard />
+          <LevelCard />
+          <LevelCard />
+          <LevelCard />
+          <LevelCard />
+        </div>
       </div>
     </div>
   );

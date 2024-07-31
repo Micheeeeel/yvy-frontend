@@ -21,7 +21,7 @@ const LevelCard = () => {
             alt="niveau jouable"
           />
         </div>
-        <p className="font-inter text-3xl font-semibold text-white text-left ">
+        <p className="font-inter text-3xl  text-white text-left ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit.
         </p>
