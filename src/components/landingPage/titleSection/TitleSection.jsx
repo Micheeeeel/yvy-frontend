@@ -7,7 +7,9 @@ import LogoIcon from "../share/LogoIcon";
 const TitleSection = () => {
   return (
     <div className="flex flex-col items-center gap-5 ">
-      <LogoIcon />
+      <div className="flex-shrink-0 w-48">
+        <LogoIcon />
+      </div>{" "}
       <MainTitle />
       <SubTitle />
       <SeparatorLine />

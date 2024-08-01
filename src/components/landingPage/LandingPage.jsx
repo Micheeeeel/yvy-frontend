@@ -3,10 +3,12 @@ import TitleSection from "./titleSection/TitleSection";
 import PresentationImage from "./PresentationImage";
 import CardDivider from "./share/CardDivider";
 import LevelCard from "./levelCard/LevelCard";
+import TopBar from "./share/TopBar";
 
 const LandingPage = () => {
   return (
     <div className="bg-black text-white w-full min-h-screen relative">
+      <TopBar />
       <div className="max-w-screen-2xl mx-auto pt-20 pb-20 px-4">
         <TitleSection />
         <div>

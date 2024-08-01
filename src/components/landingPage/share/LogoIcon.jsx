@@ -4,10 +4,11 @@ import React from "react";
 const LogoIcon = () => {
   return (
     <svg
-      className="frame-titre-logo w-[203px] h-auto "
+      className="frame-titre-logo"
       viewBox="0 0 745 240"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid meet"
     >
       <circle
         cx="115"
