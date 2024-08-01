@@ -1,6 +1,8 @@
 // src/components/TopBar.jsx
 import React from "react";
 import LogoIcon from "./LogoIcon";
+import Button from "./Button";
+import { ArrowRightIcon } from "@heroicons/react/24/solid"; // Remplacez par l'icône de votre choix
 
 const TopBar = () => {
   return (
@@ -9,20 +11,20 @@ const TopBar = () => {
         <LogoIcon />
       </div>
       <nav className="pl-8 ml-auto flex space-x-8 sm:space-x-16 lg:space-x-24 xl:space-x-32 pr-8 sm:pr-16 lg:pr-24 xl:pr-32 ">
-        <a href="#home" className="text-white hover:text-primary">
+        {/* hover : souligner le text */}
+        <a href="#home" className="text-white hover:underline">
           Accueil
         </a>
-        <a href="#blog" className="text-white hover:text-primary">
+        <a href="#blog" className="text-white hover:underline">
           Blog
         </a>
-        <a href="#contact" className="text-white hover:text-primary">
+        <a href="#contact" className="text-white hover:underline">
           Contact
         </a>
       </nav>
+
       <div className="pr-2 sm:pr-4 lg:pr-8 xl:pr-16">
-        <button className="bg-primary text-white py-2 px-4 rounded hover:bg-primary-lighten ">
-          Login
-        </button>
+        <Button text="Connexion" Icon={ArrowRightIcon} />
       </div>
     </header>
   );
