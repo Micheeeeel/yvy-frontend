@@ -1,7 +1,7 @@
 // src/components/Logo.jsx
 import React from "react";
 
-const Logo = () => {
+const LogoIcon = () => {
   return (
     <svg
       className="frame-titre-logo w-[203px] h-auto "
@@ -130,4 +130,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default LogoIcon;

@@ -1,6 +1,6 @@
 // src/components/LevelCard.jsx
 import React from "react";
-import CardLinesDesktop from "../CardLinesDesktop";
+import CardDivider from "../share/CardDivider";
 import "../../styles/gradients.css"; // Assurez-vous d'importer les styles
 import image from "../../../assets/images/eco-guards-im-regenwald-mathias-rittgerott-rdr 1.png";
 
@@ -13,7 +13,7 @@ const LevelCard = () => {
             Premier niveau
           </h2>
         </div>
-        <CardLinesDesktop color="border-secondary" />
+        <CardDivider color="border-secondary" />
         <div className="flex justify-center">
           <img
             className="w-full h-48 object-cover"

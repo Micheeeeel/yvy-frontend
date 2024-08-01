@@ -1,6 +1,6 @@
 import React from "react";
 
-const Line = () => {
+const SeparatorLine = () => {
   // return (
   //   <svg
   //     width="300" // Définit la largeur du SVG à 300 pixels
@@ -21,4 +21,4 @@ const Line = () => {
   );
 };
 
-export default Line;
+export default SeparatorLine;

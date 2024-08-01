@@ -1,6 +1,6 @@
 import React from "react";
 
-const LabelTitleText = () => {
+const SubTitle = () => {
   return (
     <p className=" max-width: 100% font-inter font-normal text-lg">
       Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
@@ -9,4 +9,4 @@ const LabelTitleText = () => {
   );
 };
 
-export default LabelTitleText;
+export default SubTitle;

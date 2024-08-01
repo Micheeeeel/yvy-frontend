@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const CardLinesDesktop = ({ color }) => {
+const CardDivider = ({ color }) => {
   return (
     <div className="w-full">
       <div className={`border ${color}`}></div>
@@ -9,8 +9,8 @@ const CardLinesDesktop = ({ color }) => {
   );
 };
 
-CardLinesDesktop.propTypes = {
+CardDivider.propTypes = {
   color: PropTypes.string.isRequired,
 };
 
-export default CardLinesDesktop;
+export default CardDivider;
