@@ -11,10 +11,5 @@ export const theme = {
       ternary: "rgba(239, 202, 8, 1)",
     },
   },
-  screens: {
-    tablet: "640px",
-    laptop: "1024px",
-    desktop: "1280px",
-  },
 };
 export const plugins = [];

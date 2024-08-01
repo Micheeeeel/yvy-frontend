@@ -7,13 +7,13 @@ import LevelCard from "./levelCard/LevelCard";
 const FrameLandingPage = () => {
   return (
     <div className="bg-black text-white w-full min-h-screen relative">
-      <div className="flex flex-col items-center gap-5 w-full max-w-screen-xl mx-auto pt-20 pb-20   ">
+      <div className="max-w-screen-2xl mx-auto pt-20 pb-20 px-4">
         <FrameTitre />
-        <div className="w-full px-4">
-          <ImagePresentation className=" h-auto object-contain " />
+        <div>
+          <ImagePresentation />
         </div>
         <CardLinesDesktop color="border-primary" />
-        <div className="flex flex-wrap w-full gap-x-[32px] gap-y-[32px] px-[32px] py-[32px] ">
+        <div className="grid gap-[32px]  p-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-auto">
           <LevelCard />
           <LevelCard />
           <LevelCard />

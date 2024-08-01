@@ -15,7 +15,7 @@ const Line = () => {
   // );
 
   return (
-    <div className="w-[300px]">
+    <div className="w-[300px] max-width: 100%">
       <div className="border border-primary"></div>
     </div>
   );
