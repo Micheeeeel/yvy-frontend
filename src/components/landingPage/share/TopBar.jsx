@@ -5,12 +5,22 @@ import Button from "./Button";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import "./TopBar.css";
 
 const TopBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [animateSidebar, setAnimateSidebar] = useState(false);
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    if (sidebarOpen) {
+      setAnimateSidebar(true);
+      setTimeout(() => {
+        setSidebarOpen(false);
+        setAnimateSidebar(false);
+      }, 300); // Match the duration of the slide-out animation
+    } else {
+      setSidebarOpen(true);
+    }
   };
 
   return (
@@ -46,7 +56,11 @@ const TopBar = () => {
 
       {/* UNDER SM SCREENS : */}
       {sidebarOpen && (
-        <div className="fixed top-[80px] right-0 w-64 h-full bg-black/80 z-50 ">
+        <div
+          className={`fixed top-[80px] right-0 w-64 h-full bg-black/80 z-50 ${
+            animateSidebar ? "slide-out-right" : "slide-in-right"
+          }`}
+        >
           <nav className="flex flex-col items-center justify-center h-full space-y-20">
             <a href="#home" className="text-white hover:underline">
               Accueil
