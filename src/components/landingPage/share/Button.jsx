@@ -9,7 +9,7 @@ const Button = ({ text, Icon }) => {
       font-inter font-semibold text-secondary hover:text-secondary-light "
     >
       {text}
-      {Icon && <Icon className="ml-2 h-5 w-5" />}
+      {Icon && <Icon className="ml-2 h-5 w-5 " />}
     </button>
   );
 };
