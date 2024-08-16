@@ -36,13 +36,13 @@ const TopBar = () => {
                     sm:pr-8 md:pr-16 lg:pr-24 xl:pr-32   
                     sm:space-x-8 md:space-x-16 lg:space-x-24 xl:space-x-32 "
       >
-        <a href="/" className="text-white hover:underline">
+        <a href="/accueil" className="text-white hover:underline">
           Accueil
         </a>
-        <a href="/contact" className="text-white hover:underline">
+        <a href="/blog" className="text-white hover:underline">
           Blog
         </a>
-        <a href="#contact" className="text-white hover:underline">
+        <a href="/contact" className="text-white hover:underline">
           Contact
         </a>
       </nav>
