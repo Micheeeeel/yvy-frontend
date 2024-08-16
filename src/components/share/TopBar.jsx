@@ -41,9 +41,9 @@ const TopBar = () => {
         <Link to={"accueil"} className="text-white hover:underline">
           Accueil
         </Link>
-        <a href="/blog" className="text-white hover:underline">
+        <Link to={"blog"} className="text-white hover:underline">
           Blog
-        </a>
+        </Link>
         <Link to={"contact"} className="text-white hover:underline">
           Contact
         </Link>
@@ -64,15 +64,15 @@ const TopBar = () => {
           }`}
         >
           <nav className="flex flex-col items-center justify-center h-full space-y-20">
-            <a href="#home" className="text-white hover:underline">
+            <Link to={"accueil"} className="text-white hover:underline">
               Accueil
-            </a>
-            <a href="#blog" className="text-white hover:underline">
+            </Link>
+            <Link to={"blog"} className="text-white hover:underline">
               Blog
-            </a>
-            <a href="#contact" className="text-white hover:underline">
+            </Link>
+            <Link to={"contact"} className="text-white hover:underline">
               Contact
-            </a>
+            </Link>
             <Button text="Connexion" Icon={ArrowRightIcon} />
           </nav>
         </div>
