@@ -41,9 +41,9 @@ const TopBar = () => {
         <Link to={"accueil"} className="text-white hover:underline">
           Accueil
         </Link>
-        <a href="/blog" className="text-white hover:underline">
+        <Link to={"blog"} className="text-white hover:underline">
           Blog
-        </a>
+        </Link>
         <Link to={"contact"} className="text-white hover:underline">
           Contact
         </Link>

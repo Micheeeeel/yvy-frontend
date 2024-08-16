@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-export function Level() {
+export default function Level() {
   const { levelId } = useParams();
 
   return (

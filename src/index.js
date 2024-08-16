@@ -7,7 +7,8 @@ import Contact from "./routes/Contact";
 import Accueil from "./routes/Accueil";
 import "./index.css";
 import ErrorPage from "./error-page";
-import { Level } from "./routes/Level";
+import Level from "./routes/Level";
+import Blog from "./routes/Blog";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
         path: "accueil",
         element: <Accueil />,
       },
+      {
+        path: "blog",
+        element: <Blog />,
+      },
+
       {
         path: "contact",
         element: <Contact />,
