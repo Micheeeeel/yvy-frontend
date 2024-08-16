@@ -1,8 +1,8 @@
 import React from "react";
 import TitleSection from "../components/landingPage/titleSection/TitleSection";
-import PresentationImage from "../components/landingPage/PresentationImage";
+import PresentationImage from "../components/PresentationImage";
 import CardDivider from "../components/landingPage/share/CardDivider";
-import LevelCard from "../components/landingPage/levelCard/LevelCard";
+import LevelCard from "../components/levelCard/LevelCard";
 
 const Accueil = () => {
   return (

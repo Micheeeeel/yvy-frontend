@@ -1,8 +1,8 @@
 // src/components/LevelCard.jsx
 import React from "react";
 import CardDivider from "../share/CardDivider";
-import "../../styles/gradients.css"; // Assurez-vous d'importer les styles
-import image from "../../../assets/images/eco-guards-im-regenwald-mathias-rittgerott-rdr 1.png";
+import "../styles/gradients.css"; // Assurez-vous d'importer les styles
+import image from "../../assets/images/eco-guards-im-regenwald-mathias-rittgerott-rdr 1.png";
 import { Link } from "react-router-dom";
 
 const LevelCard = () => {
