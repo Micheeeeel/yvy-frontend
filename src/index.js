@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
+import Contact from "./routes/Contact";
 import "./index.css";
 import ErrorPage from "./error-page";
 
@@ -11,6 +12,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 

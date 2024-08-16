@@ -4,6 +4,7 @@ import PresentationImage from "./PresentationImage";
 import CardDivider from "./share/CardDivider";
 import LevelCard from "./levelCard/LevelCard";
 import TopBar from "./share/TopBar";
+import { Outlet } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
         <TitleSection />
         <div>
           <PresentationImage />
+          <Outlet />
         </div>
         <CardDivider color="border-primary" />
         <div className="grid gap-[32px]  p-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-auto">
