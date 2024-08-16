@@ -6,6 +6,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import "./TopBar.css";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -36,15 +37,15 @@ const TopBar = () => {
                     sm:pr-8 md:pr-16 lg:pr-24 xl:pr-32   
                     sm:space-x-8 md:space-x-16 lg:space-x-24 xl:space-x-32 "
       >
-        <a href="/accueil" className="text-white hover:underline">
+        <Link to={"accueil"} className="text-white hover:underline">
           Accueil
-        </a>
+        </Link>
         <a href="/blog" className="text-white hover:underline">
           Blog
         </a>
-        <a href="/contact" className="text-white hover:underline">
+        <Link to={"contact"} className="text-white hover:underline">
           Contact
-        </a>
+        </Link>
       </nav>
 
       <div className="hidden sm:block sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">

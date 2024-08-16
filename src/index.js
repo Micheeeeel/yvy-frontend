@@ -15,6 +15,10 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        index: true, // This makes Accueil the default component
+        element: <Accueil />,
+      },
+      {
         path: "accueil",
         element: <Accueil />,
       },
