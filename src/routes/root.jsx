@@ -1,5 +1,5 @@
 import React from "react";
-import TopBar from "../components/landingPage/share/TopBar";
+import TopBar from "../components/share/TopBar";
 import { Outlet } from "react-router-dom";
 
 export default function Root() {
