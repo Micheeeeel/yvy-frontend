@@ -2,8 +2,10 @@
 import React from "react";
 import LogoIcon from "./LogoIcon";
 import Button from "./Button";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowRightIcon,
+  EllipsisVerticalIcon,
+} from "@heroicons/react/24/outline";
 import { useState } from "react";
 import "./TopBar.css";
 import { Link } from "react-router-dom";
