@@ -1,7 +1,18 @@
 import { Form } from "react-router-dom";
 
+interface Contact {
+  id: string;
+  first: string;
+  last: string;
+  avatar: string;
+  twitter: string;
+  notes: string;
+  favorite: boolean;
+}
+
 export default function Contact() {
-  const contact = {
+  const contact: Contact = {
+    id: "truc",
     first: "Your",
     last: "Name",
     avatar: "https://robohash.org/you.png?size=200x200",
@@ -65,7 +76,7 @@ export default function Contact() {
   );
 }
 
-function Favorite({ contact }) {
+function Favorite({ contact }: { readonly contact: Contact }) {
   const favorite = contact.favorite;
   return (
     <Form method="post">

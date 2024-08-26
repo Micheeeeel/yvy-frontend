@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Définit la version de JavaScript cible. ES6 est une bonne option pour la plupart des projets.
+    "lib": ["dom", "dom.iterable", "esnext"], // Spécifie les bibliothèques standard que TypeScript doit inclure dans le projet.
+    "allowJs": true, // Permet de compiler des fichiers JavaScript aux côtés de fichiers TypeScript.
+    "skipLibCheck": true, // Désactive la vérification des types pour les fichiers de définition de bibliothèque (.d.ts).
+    "esModuleInterop": true, // Assure la compatibilité avec les modules CommonJS et ES.
+    "allowSyntheticDefaultImports": true, // Permet d'importer des modules avec un export par défaut même s'ils n'en ont pas.
+    "strict": true, // Active toutes les vérifications strictes de TypeScript (recommandé).
+    "forceConsistentCasingInFileNames": true, // Enforce la cohérence de la casse dans les importations de fichiers.
+    "noFallthroughCasesInSwitch": true, // Désactive le fallthrough dans les switch.
+    "module": "esnext", // Utilise la syntaxe de modules ES pour la transpilation.
+    "moduleResolution": "node", // Utilise la résolution de modules Node.js.
+    "resolveJsonModule": true, // Permet d'importer des fichiers JSON.
+    "isolatedModules": true, // Assure que chaque fichier est traité comme un module isolé.
+    "noEmit": true, // Empêche TypeScript de générer des fichiers de sortie (utile avec Babel).
+    "jsx": "react-jsx" // Utilise la nouvelle transform JSX pour React 17+.
+  },
+  "include": ["src"], // Inclut tous les fichiers TypeScript dans le dossier `src`.
+  "exclude": ["node_modules", "build", "dist"] // Exclut les dossiers `node_modules` et les dossiers de build/dist.
+}
