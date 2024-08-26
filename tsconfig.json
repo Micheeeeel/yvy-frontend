@@ -16,6 +16,6 @@
     "noEmit": true, // Empêche TypeScript de générer des fichiers de sortie (utile avec Babel).
     "jsx": "react-jsx" // Utilise la nouvelle transform JSX pour React 17+.
   },
-  "include": ["src"], // Inclut tous les fichiers TypeScript dans le dossier `src`.
+  "include": ["src", "types"], // Inclut tous les fichiers TypeScript dans le dossier `src`.
   "exclude": ["node_modules", "build", "dist"] // Exclut les dossiers `node_modules` et les dossiers de build/dist.
 }
