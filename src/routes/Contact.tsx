@@ -1,6 +1,8 @@
+/* eslint-disable no-restricted-globals */
+
 import { Form } from "react-router-dom";
 
-interface Contact {
+type ContactUser = {
   id: string;
   first: string;
   last: string;
@@ -8,10 +10,10 @@ interface Contact {
   twitter: string;
   notes: string;
   favorite: boolean;
-}
+};
 
 export default function Contact() {
-  const contact: Contact = {
+  const contact: ContactUser = {
     id: "truc",
     first: "Your",
     last: "Name",
@@ -30,6 +32,7 @@ export default function Contact() {
             contact.avatar ||
             `https://robohash.org/${contact.id}.png?size=200x200`
           }
+          alt={`${contact.first} ${contact.last}'s avatar`} // Exemple d'alt significatif
         />
       </div>
 
@@ -47,7 +50,11 @@ export default function Contact() {
 
         {contact.twitter && (
           <p>
-            <a target="_blank" href={`https://twitter.com/${contact.twitter}`}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://twitter.com/${contact.twitter}`}
+            >
               {contact.twitter}
             </a>
           </p>
@@ -76,7 +83,7 @@ export default function Contact() {
   );
 }
 
-function Favorite({ contact }: { readonly contact: Contact }) {
+function Favorite({ contact }: { readonly contact: ContactUser }) {
   const favorite = contact.favorite;
   return (
     <Form method="post">
@@ -90,3 +97,5 @@ function Favorite({ contact }: { readonly contact: Contact }) {
     </Form>
   );
 }
+
+/* eslint-disable no-restricted-globals */
