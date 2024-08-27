@@ -28,7 +28,7 @@ const TopBar = () => {
   return (
     <header className="fixed top-0 w-full h-20 bg-black/65 flex items-center justify-between px-8 z-50">
       {/* UPPER SM SCREENS : */}
-      <div className="flex-shrink-0 w-24">
+      <div className="flex-shrink-0 w-28">
         <LogoIcon />
       </div>
       {/* <nav className="pl-8 ml-auto flex space-x-8 sm:space-x-16 lg:space-x-24 xl:space-x-32 pr-8 sm:pr-16 lg:pr-24 xl:pr-32 "> */}
@@ -38,13 +38,22 @@ const TopBar = () => {
                     sm:pr-8 md:pr-16 lg:pr-24 xl:pr-32   
                     sm:space-x-8 md:space-x-16 lg:space-x-24 xl:space-x-32 "
       >
-        <Link to={"accueil"} className="text-white hover:underline font-inter">
+        <Link
+          to={"accueil"}
+          className="text-white hover:underline font-inter text-lg"
+        >
           Accueil
         </Link>
-        <Link to={"blog"} className="text-white hover:underline font-inter">
+        <Link
+          to={"blog"}
+          className="text-white hover:underline font-inter text-lg"
+        >
           Blog
         </Link>
-        <Link to={"contact"} className="text-white hover:underline font-inter">
+        <Link
+          to={"contact"}
+          className="text-white hover:underline font-inter text-lg"
+        >
           Contact
         </Link>
       </nav>
@@ -66,16 +75,19 @@ const TopBar = () => {
           <nav className="flex flex-col items-center justify-center h-full space-y-20">
             <Link
               to={"accueil"}
-              className="text-white hover:underline font-inter"
+              className="text-white hover:underline font-inter text-lg"
             >
               Accueil
             </Link>
-            <Link to={"blog"} className="text-white hover:underline font-inter">
+            <Link
+              to={"blog"}
+              className="text-white hover:underline font-inter text-lg"
+            >
               Blog
             </Link>
             <Link
               to={"contact"}
-              className="text-white hover:underline font-inter"
+              className="text-white hover:underline font-inter text-lg"
             >
               Contact
             </Link>
