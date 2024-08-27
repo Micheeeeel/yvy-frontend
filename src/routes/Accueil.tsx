@@ -6,20 +6,34 @@ import LevelCard from "../components/levelCard/LevelCard";
 
 const Accueil = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto pt-20 pb-20 px-4">
+    <div className="max-w-screen-3xl mx-auto pt-20 pb-20 px-4">
       <TitleSection />
       <div>
         <PresentationImage />
       </div>
       <CardDivider color="border-primary" />
-      <div className="grid gap-[32px]  p-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-auto">
-        <LevelCard />
-        <LevelCard />
-        <LevelCard />
-        <LevelCard />
-        <LevelCard />
-        <LevelCard />
-        <LevelCard />
+      <div className="flex flex-wrap gap-[32px] p-[32px] justify-center">
+        <div className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
+          <LevelCard />
+        </div>
+        <div className="flex justify-center w-[32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
+          <LevelCard />
+        </div>
+        <div className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
+          <LevelCard />
+        </div>
+        <div className="flex justify-center w-[calc1005%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
+          <LevelCard />
+        </div>
+        <div className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
+          <LevelCard />
+        </div>
+        <div className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
+          <LevelCard />
+        </div>
+        <div className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
+          <LevelCard />
+        </div>
       </div>
     </div>
   );

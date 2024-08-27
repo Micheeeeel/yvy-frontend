@@ -9,7 +9,7 @@ const PresentationImage = () => {
       <img
         src={presentationImage}
         alt="Artistic representation of the human activity"
-        className="w-full max-h-[650px] object-contain"
+        className="w-full max-h-[750px] object-contain"
       ></img>
     </div>
   );
