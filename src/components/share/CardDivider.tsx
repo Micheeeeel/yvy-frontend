@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const CardDivider = ({ color }) => {
+type CardDividerProps = {
+  color: string;
+};
+
+const CardDivider: React.FC<CardDividerProps> = ({ color }) => {
   return (
     <div className="w-full">
       <div className={`border ${color}`}></div>
     </div>
   );
-};
-
-CardDivider.propTypes = {
-  color: PropTypes.string.isRequired,
 };
 
 export default CardDivider;

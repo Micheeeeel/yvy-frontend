@@ -1,7 +1,11 @@
-// src/components/Button.jsx
 import React from "react";
 
-const Button = ({ text, Icon }) => {
+type ButtonProps = {
+  text: string;
+  Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+};
+
+const Button: React.FC<ButtonProps> = ({ text, Icon }) => {
   return (
     <button
       className="flex items-center bg-primary 
