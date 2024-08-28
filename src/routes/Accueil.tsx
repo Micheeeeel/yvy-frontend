@@ -12,7 +12,7 @@ const Accueil = () => {
         <Outlet />
       </div>
       <CardDivider color="border-primary" />
-      <div className="flex flex-wrap gap-[32px] p-[32px] justify-center">
+      <div className="flex flex-wrap gap-[32px] p-[8px] justify-center">
         <div className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]">
           <LevelCard />
         </div>

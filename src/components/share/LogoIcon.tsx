@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const LogoIcon = () => {
   return (
-    <Link to="accueil" className="block">
+    <Link to="/" className="block">
       <svg
         className="frame-titre-logo"
         viewBox="0 0 745 240"

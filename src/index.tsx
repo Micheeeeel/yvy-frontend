@@ -10,6 +10,7 @@ import Level from "./routes/Level";
 import Blog from "./routes/Blog";
 import "./index.css"; // Suppression de App.css si inutilisé
 import PresentationImage from "./components/PresentationImage";
+import LevelsMap from "./components/LevelsMap";
 
 const router = createBrowserRouter([
   {

@@ -26,7 +26,7 @@ const TopBar = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full h-20 bg-black/65 flex items-center justify-between px-8 z-50">
+    <header className="fixed top-0 left-0 z-10 w-full h-20 bg-black/65 flex items-center justify-between px-8 ">
       {/* UPPER SM SCREENS : */}
       <div className="flex-shrink-0 w-28">
         <LogoIcon />
@@ -39,7 +39,7 @@ const TopBar = () => {
                     sm:space-x-8 md:space-x-16 lg:space-x-24 xl:space-x-32 "
       >
         <Link
-          to={"accueil"}
+          to={"/"}
           className="text-white hover:underline font-inter text-lg"
         >
           Accueil
