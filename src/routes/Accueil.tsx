@@ -1,15 +1,15 @@
 import React from "react";
 import TitleSection from "../components/titleSection/TitleSection";
-import PresentationImage from "../components/PresentationImage";
 import CardDivider from "../components/share/CardDivider";
 import LevelCard from "../components/levelCard/LevelCard";
+import { Outlet } from "react-router-dom";
 
 const Accueil = () => {
   return (
     <div className="max-w-screen-3xl mx-auto pt-20 pb-20 px-4">
       <TitleSection />
       <div>
-        <PresentationImage />
+        <Outlet />
       </div>
       <CardDivider color="border-primary" />
       <div className="flex flex-wrap gap-[32px] p-[32px] justify-center">

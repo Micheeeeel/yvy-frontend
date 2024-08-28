@@ -9,6 +9,7 @@ import ErrorPage from "./error-page";
 import Level from "./routes/Level";
 import Blog from "./routes/Blog";
 import "./index.css"; // Suppression de App.css si inutilisé
+import PresentationImage from "./components/PresentationImage";
 
 const router = createBrowserRouter([
   {
@@ -17,12 +18,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
+        path: "/",
         element: <Accueil />,
-      },
-      {
-        path: "accueil",
-        element: <Accueil />,
+        children: [
+          {
+            path: "/",
+            element: <PresentationImage />,
+          },
+          {
+            path: "levelsMap",
+            element: <LevelsMap />,
+          },
+        ],
       },
       {
         path: "blog",
