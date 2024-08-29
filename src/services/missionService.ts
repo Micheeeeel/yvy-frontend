@@ -4,6 +4,7 @@ export interface Mission {
   image: string;
   shortDescription: string;
   country: string;
+  type: string;
 }
 
 export const fetchMissionsData = async (): Promise<Mission[]> => {
