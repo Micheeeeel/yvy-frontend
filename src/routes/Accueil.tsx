@@ -33,9 +33,9 @@ const Accueil = () => {
       </TransitionGroup>
       <CardDivider color="border-primary" />
       <div className="flex flex-wrap gap-[32px] p-[8px] justify-center">
-        {missions.map((mission, index) => (
+        {missions.map((mission) => (
           <div
-            key={index}
+            key={mission.id}
             className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]"
           >
             {/* Passe les données de chaque mission comme props au composant LevelCard */}

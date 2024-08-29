@@ -1,4 +1,5 @@
 export interface Mission {
+  id: string;
   title: string;
   image: string;
   shortDescription: string;
