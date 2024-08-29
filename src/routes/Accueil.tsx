@@ -6,6 +6,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../components/styles/transitions.css"; // Fichier CSS pour les transitions entre composants
 import { fetchMissionsData, Mission } from "../services/missionService";
+import MissionList from "../components/MissionList";
 
 const Accueil = () => {
   const [missions, setMissions] = useState<Mission[]>([]); // Utilisation du hook useState pour stocker les missions
@@ -32,17 +33,7 @@ const Accueil = () => {
         </CSSTransition>
       </TransitionGroup>
       <CardDivider color="border-primary" />
-      <div className="flex flex-wrap gap-[32px] p-[8px] justify-center">
-        {missions.map((mission) => (
-          <div
-            key={mission.id}
-            className="flex justify-center w-[calc(100%-32px)] sm:w-[calc(50%-32px)] lg:w-[calc(33.33%-32px)] xl:w-[calc(25%-32px)]"
-          >
-            {/* Passe les données de chaque mission comme props au composant LevelCard */}
-            <LevelCard mission={mission} />
-          </div>
-        ))}
-      </div>
+      <MissionList missions={missions} />
     </div>
   );
 };
