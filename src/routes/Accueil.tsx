@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TitleSection from "../components/titleSection/TitleSection";
 import CardDivider from "../components/share/CardDivider";
-import LevelCard from "../components/levelCard/LevelCard";
 import { Outlet, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../components/styles/transitions.css"; // Fichier CSS pour les transitions entre composants
