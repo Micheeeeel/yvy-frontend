@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import TitleSection from "../components/titleSection/TitleSection";
-import CardDivider from "../components/share/CardDivider";
 import { Outlet, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../components/styles/transitions.css"; // Fichier CSS pour les transitions entre composants
@@ -61,7 +60,7 @@ const Accueil = () => {
         types={types}
       />
       {/* Liste des missions filtrées */}
-      <MissionList missions={filteredMissions} />{" "}
+      <MissionList missions={filteredMissions} />
     </div>
   );
 };
