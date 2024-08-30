@@ -25,7 +25,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
   };
 
   return (
-    <div className="mb-8">
+    <div className="mb-8 flex flex-row gap-5 justify-evenly">
       <label>
         Country:
         <select
