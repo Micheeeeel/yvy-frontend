@@ -54,7 +54,6 @@ const Accueil = () => {
           </div>
         </CSSTransition>
       </TransitionGroup>
-      <CardDivider color="border-primary" />
       {/* Formulaire de recherche pour filtrer les missions */}
       <SearchForm
         onFilterChange={handleFilterChange}

@@ -28,7 +28,10 @@ const SearchForm: React.FC<SearchFormProps> = ({
     <div className="mb-8">
       <label>
         Country:
-        <select value={selectedCountry} onChange={handleCountryChange}>
+        <select
+          className="select select-ghost w-full max-w-xs border-primary"
+          onChange={handleCountryChange}
+        >
           <option value="">All</option>
           {countries.map((country) => (
             <option key={country} value={country}>
@@ -39,7 +42,10 @@ const SearchForm: React.FC<SearchFormProps> = ({
       </label>
       <label>
         Type:
-        <select value={selectedType} onChange={handleTypeChange}>
+        <select
+          className="select select-ghost w-full max-w-xs border-primary"
+          onChange={handleTypeChange}
+        >
           <option value="">All</option>
           {types.map((type) => (
             <option key={type} value={type}>
