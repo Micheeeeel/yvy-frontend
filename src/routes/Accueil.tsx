@@ -53,6 +53,9 @@ const Accueil = () => {
           </div>
         </CSSTransition>
       </TransitionGroup>
+
+      <div className="divider divider-neutral  ">Missions</div>
+
       {/* Formulaire de recherche pour filtrer les missions */}
       <SearchForm
         onFilterChange={handleFilterChange}
