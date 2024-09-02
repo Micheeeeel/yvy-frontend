@@ -25,35 +25,38 @@ const SearchForm: React.FC<SearchFormProps> = ({
   };
 
   return (
-    <div className="mb-8 flex flex-row gap-5 justify-evenly">
-      <label>
-        Country:
-        <select
-          className="select select-ghost w-full max-w-xs border-primary"
-          onChange={handleCountryChange}
-        >
-          <option value="">All</option>
-          {countries.map((country) => (
-            <option key={country} value={country}>
-              {country}
-            </option>
-          ))}
-        </select>
-      </label>
-      <label>
-        Type:
-        <select
-          className="select select-ghost w-full max-w-xs border-primary"
-          onChange={handleTypeChange}
-        >
-          <option value="">All</option>
-          {types.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-      </label>
+    <div className="px-10 py-5">
+      <div className="divider divider-neutral font-bold text-4xl">MISSIONS</div>
+      <div className="mb-8 flex flex-row gap-5 justify-evenly">
+        <label>
+          Country:
+          <select
+            className="select select-ghost w-full max-w-xs border-primary"
+            onChange={handleCountryChange}
+          >
+            <option value="">All</option>
+            {countries.map((country) => (
+              <option key={country} value={country}>
+                {country}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Type:
+          <select
+            className="select select-ghost w-full max-w-xs border-primary"
+            onChange={handleTypeChange}
+          >
+            <option value="">All</option>
+            {types.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
     </div>
   );
 };
