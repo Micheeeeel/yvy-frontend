@@ -14,7 +14,7 @@ const LevelCard: React.FC<LevelCardProps> = ({ mission }) => {
       <div className="relative max-w-[430px] h-auto mx-auto bg-black overflow-hidden gradient-border">
         <div className="relative flex flex-col p-4 gap-4">
           <div>
-            <h2 className="font-inter font-bold text-3xl text-white text-left uppercase">
+            <h2 className="font-bold text-3xl text-white text-left uppercase">
               {mission.title}
             </h2>
           </div>
@@ -26,7 +26,7 @@ const LevelCard: React.FC<LevelCardProps> = ({ mission }) => {
               alt={mission.title}
             />
           </div>
-          <p className="font-inter text-2xl text-white text-left">
+          <p className=" text-2xl text-white text-left">
             {mission.shortDescription}
           </p>
         </div>

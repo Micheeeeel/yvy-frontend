@@ -38,22 +38,13 @@ const TopBar = () => {
                     sm:pr-8 md:pr-16 lg:pr-24 xl:pr-32   
                     sm:space-x-8 md:space-x-16 lg:space-x-24 xl:space-x-32 "
       >
-        <Link
-          to={"/"}
-          className="text-white hover:underline font-inter text-lg"
-        >
+        <Link to={"/"} className="text-white hover:underline  text-lg">
           Accueil
         </Link>
-        <Link
-          to={"blog"}
-          className="text-white hover:underline font-inter text-lg"
-        >
+        <Link to={"blog"} className="text-white hover:underline  text-lg">
           Blog
         </Link>
-        <Link
-          to={"contact"}
-          className="text-white hover:underline font-inter text-lg"
-        >
+        <Link to={"contact"} className="text-white hover:underline  text-lg">
           Contact
         </Link>
       </nav>
@@ -61,6 +52,7 @@ const TopBar = () => {
       <div className="hidden sm:block sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16">
         <Button text="Connexion" Icon={ArrowRightIcon} />
       </div>
+
       <button onClick={toggleSidebar} className="sm:hidden">
         <EllipsisVerticalIcon className="h-6 w-6 text-primary-500 " />
       </button>
@@ -75,19 +67,16 @@ const TopBar = () => {
           <nav className="flex flex-col items-center justify-center h-full space-y-20">
             <Link
               to={"accueil"}
-              className="text-white hover:underline font-inter text-lg"
+              className="text-white hover:underline  text-lg"
             >
               Accueil
             </Link>
-            <Link
-              to={"blog"}
-              className="text-white hover:underline font-inter text-lg"
-            >
+            <Link to={"blog"} className="text-white hover:underline  text-lg">
               Blog
             </Link>
             <Link
               to={"contact"}
-              className="text-white hover:underline font-inter text-lg"
+              className="text-white hover:underline  text-lg"
             >
               Contact
             </Link>
