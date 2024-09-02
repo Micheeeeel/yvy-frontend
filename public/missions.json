@@ -5,7 +5,9 @@
     "image": "/images/Radio-pour-la-foret.jpg",
     "shortDescription": "Une émission de radio et des rites anciens pour préserver la forêt en Guinée-Bissau. Cette initiative locale promeut les traditions orales et les pratiques durables.",
     "country": "Guinée-Bissau",
-    "type": "Éducation"
+    "type": "Éducation",
+    "lat": 11.8037,
+    "lng": -15.1804
   },
   {
     "id": "2",
@@ -13,7 +15,9 @@
     "image": "/images/Liberte-pour-la-nature.jpg",
     "shortDescription": "Défendre la nature et la démocratie au Cambodge, même au prix de sa propre liberté. Les activistes luttent pour la protection des forêts.",
     "country": "Cambodge",
-    "type": "Activisme"
+    "type": "Activisme",
+    "lat": 12.5657,
+    "lng": 104.991
   },
   {
     "id": "3",
@@ -21,7 +25,9 @@
     "image": "/images/Resistance-miniere.jpg",
     "shortDescription": "Résistance contre l'exploitation minière aux Célèbes en Indonésie. Les communautés locales défient les grandes entreprises.",
     "country": "Indonésie",
-    "type": "Conservation"
+    "type": "Conservation",
+    "lat": -1.4419,
+    "lng": 120.195
   },
   {
     "id": "4",
@@ -29,7 +35,9 @@
     "image": "/images/Animaux-reintroduits.jpg",
     "shortDescription": "Réintroduire les animaux dans leur habitat naturel en Équateur. Un programme ambitieux pour restaurer l'équilibre écologique.",
     "country": "Équateur",
-    "type": "Conservation"
+    "type": "Conservation",
+    "lat": -1.8312,
+    "lng": -78.1834
   },
   {
     "id": "5",
@@ -37,7 +45,9 @@
     "image": "/images/Confiance-pour-bonobos.jpg",
     "shortDescription": "Une école de la confiance pour la protection des bonobos en République Démocratique du Congo. Préservation et éducation pour ces grands singes.",
     "country": "République Démocratique du Congo",
-    "type": "Éducation"
+    "type": "Éducation",
+    "lat": -1.9462,
+    "lng": 29.8739
   },
   {
     "id": "6",
@@ -45,7 +55,9 @@
     "image": "/images/Stopper-le-petrole.jpg",
     "shortDescription": "Fermer le robinet du pétrole en Ouganda pour protéger les ressources naturelles et les populations locales contre l'exploitation pétrolière.",
     "country": "Ouganda",
-    "type": "Activisme"
+    "type": "Activisme",
+    "lat": 1.3733,
+    "lng": 32.2903
   },
   {
     "id": "7",
@@ -53,7 +65,9 @@
     "image": "/images/Faune-preservee.jpg",
     "shortDescription": "Un lieu où cohabitent orangs-outans, tigres et éléphants en Indonésie. Un sanctuaire pour les espèces menacées.",
     "country": "Indonésie",
-    "type": "Conservation"
+    "type": "Conservation",
+    "lat": -2.5489,
+    "lng": 118.0149
   },
   {
     "id": "8",
@@ -61,7 +75,9 @@
     "image": "/images/Radio-pour-nature.jpg",
     "shortDescription": "Une radio pour les communautés et la nature en Tanzanie. Promouvoir la conscience écologique par la diffusion d'émissions locales.",
     "country": "Tanzanie",
-    "type": "Éducation"
+    "type": "Éducation",
+    "lat": -6.369,
+    "lng": 34.8888
   },
   {
     "id": "9",
@@ -69,7 +85,9 @@
     "image": "/images/Foret-protegee.jpg",
     "shortDescription": "Protéger la forêt avec la coopérative de femmes autochtones Tiumben K'ooben au Mexique. Un effort collectif pour la biodiversité.",
     "country": "Mexique",
-    "type": "Conservation"
+    "type": "Conservation",
+    "lat": 19.4326,
+    "lng": -99.1332
   },
   {
     "id": "10",
@@ -77,7 +95,9 @@
     "image": "/images/Defense-des-forets.jpg",
     "shortDescription": "Groupe de défense des forêts et des autochtones de Bornéo en Indonésie. Mobilisation contre la déforestation massive.",
     "country": "Indonésie",
-    "type": "Activisme"
+    "type": "Activisme",
+    "lat": -0.7893,
+    "lng": 113.9213
   },
   {
     "id": "11",
@@ -85,7 +105,9 @@
     "image": "/images/Patrimoine-naturel.jpg",
     "shortDescription": "Sauver le patrimoine naturel et culturel du sud de la Papouasie en Indonésie. Une initiative pour protéger les traditions locales.",
     "country": "Indonésie",
-    "type": "Conservation"
+    "type": "Conservation",
+    "lat": -4.2699,
+    "lng": 138.0804
   },
   {
     "id": "12",
@@ -93,7 +115,9 @@
     "image": "/images/Eco-gardes-en-action.jpg",
     "shortDescription": "Des éco-gardes pour surveiller la forêt à Afi Mountain au Nigeria. Protection de la faune et des écosystèmes.",
     "country": "Nigéria",
-    "type": "Protection"
+    "type": "Protection",
+    "lat": 9.082,
+    "lng": 8.6753
   },
   {
     "id": "13",
@@ -101,7 +125,9 @@
     "image": "/images/Cartographie-locale.jpg",
     "shortDescription": "Défendre les droits des autochtones en Malaisie par la cartographie de leur territoire. Un outil pour revendiquer leurs terres.",
     "country": "Malaisie",
-    "type": "Droits humains"
+    "type": "Droits humains",
+    "lat": 4.2105,
+    "lng": 101.9758
   },
   {
     "id": "14",
@@ -109,7 +135,9 @@
     "image": "/images/Gardiennes-jungle.jpg",
     "shortDescription": "Les gardiennes de la jungle au Liberia. Femmes engagées pour protéger la biodiversité et les ressources naturelles.",
     "country": "Liberia",
-    "type": "Conservation"
+    "type": "Conservation",
+    "lat": 6.4281,
+    "lng": -9.4295
   },
   {
     "id": "15",
@@ -117,7 +145,9 @@
     "image": "/images/Foret-amazonienne.jpg",
     "shortDescription": "Le peuple Ka'apor défend sa forêt en Amazonie, au Brésil, contre les exploitants illégaux. Une lutte pour la survie et l'avenir.",
     "country": "Brésil",
-    "type": "Activisme"
+    "type": "Activisme",
+    "lat": -3.4653,
+    "lng": -62.2159
   },
   {
     "id": "16",
@@ -125,7 +155,9 @@
     "image": "/images/Liberer-oiseaux.jpg",
     "shortDescription": "Rendre la liberté aux oiseaux prisonniers en Indonésie. Une campagne pour libérer les animaux captifs et restaurer la biodiversité.",
     "country": "Indonésie",
-    "type": "Protection"
+    "type": "Protection",
+    "lat": -6.1751,
+    "lng": 106.865
   },
   {
     "id": "17",
@@ -133,7 +165,9 @@
     "image": "/images/Droits-nature.jpg",
     "shortDescription": "Faire gagner les 'droits de la nature' devant les tribunaux en Équateur. Un précédent juridique pour la protection de l'environnement.",
     "country": "Équateur",
-    "type": "Droits humains"
+    "type": "Droits humains",
+    "lat": -0.2295,
+    "lng": -78.5249
   },
   {
     "id": "18",
@@ -141,6 +175,8 @@
     "image": "/images/Les-Batwa-proteges.jpg",
     "shortDescription": "Les Batwa et les gorilles en République Démocratique du Congo. Une cohabitation entre peuples autochtones et faune sauvage.",
     "country": "République Démocratique du Congo",
-    "type": "Droits humains"
+    "type": "Droits humains",
+    "lat": -4.0383,
+    "lng": 21.7587
   }
 ]

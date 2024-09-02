@@ -5,6 +5,8 @@ export interface Mission {
   shortDescription: string;
   country: string;
   type: string;
+  lat: number;
+  lng: number;
 }
 
 export const fetchMissionsData = async (): Promise<Mission[]> => {
