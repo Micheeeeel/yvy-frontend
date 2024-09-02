@@ -24,8 +24,10 @@
   border-style: solid;
   border-image: linear-gradient(
       130deg,
-      rgba(58, 119, 81, 1),
-      rgba(58, 119, 81, 0) 37%
+      #15803d,
+      /* Utilisation de la couleur primaire de votre thème */
+        rgba(21, 128, 61, 0) 37%
+        /* Utilisation de la même couleur en RGBA avec transparence */
     )
     1;
 }
@@ -38,8 +40,10 @@
   border-style: solid;
   border-image: linear-gradient(
       310deg,
-      rgba(58, 119, 81, 1),
-      rgba(58, 119, 81, 0) 37%
+      #15803d,
+      /* Utilisation de la couleur primaire de votre thème */
+        rgba(21, 128, 61, 0) 37%
+        /* Utilisation de la même couleur en RGBA avec transparence */
     )
     1;
 }
