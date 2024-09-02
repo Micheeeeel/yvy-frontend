@@ -54,13 +54,13 @@ const Accueil = () => {
         </CSSTransition>
       </TransitionGroup>
 
-      <div className="divider divider-neutral  ">Missions</div>
       {/* Formulaire de recherche pour filtrer les missions */}
       <SearchForm
         onFilterChange={handleFilterChange}
         countries={countries}
         types={types}
       />
+
       {/* Liste des missions filtrées */}
       <MissionList missions={filteredMissions} />
     </div>
