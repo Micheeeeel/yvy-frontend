@@ -1,40 +1,14 @@
-import React, { useEffect, useState } from "react";
 import TitleSection from "../components/titleSection/TitleSection";
 import { Outlet, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../components/styles/transitions.css"; // Fichier CSS pour les transitions entre composants
-import { fetchMissionsData, Mission } from "../services/missionService";
 import MissionList from "../components/MissionList";
 import SearchForm from "../components/SearchForm";
+import { useMissionContext } from "../context/MissionContext"; // Import du contexte
 
 const Accueil = () => {
-  const [missions, setMissions] = useState<Mission[]>([]); // Utilisation du hook useState pour stocker les missions
-  const [filteredMissions, setFilteredMissions] = useState<Mission[]>([]);
+  const { filteredMissions, filterMissions, missions } = useMissionContext();
   const location = useLocation(); // Récupère l'emplacement actuel
-
-  useEffect(() => {
-    const loadMissions = async () => {
-      const missionsData = await fetchMissionsData();
-      setMissions(missionsData); // Met à jour l'état avec les données récupérées
-      setFilteredMissions(missionsData); // Initialiser les missions filtrées
-    };
-
-    loadMissions();
-  }, []);
-
-  const handleFilterChange = (country: string, type: string) => {
-    let filtered = missions;
-
-    if (country) {
-      filtered = filtered.filter((mission) => mission.country === country);
-    }
-
-    if (type) {
-      filtered = filtered.filter((mission) => mission.type === type);
-    }
-
-    setFilteredMissions(filtered);
-  };
 
   // Extraire les valeurs uniques de country et type pour les options de sélection
   const countries = Array.from(
@@ -56,7 +30,7 @@ const Accueil = () => {
 
       {/* Formulaire de recherche pour filtrer les missions */}
       <SearchForm
-        onFilterChange={handleFilterChange}
+        onFilterChange={filterMissions}
         countries={countries}
         types={types}
       />

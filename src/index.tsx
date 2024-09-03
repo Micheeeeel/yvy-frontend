@@ -11,6 +11,7 @@ import Blog from "./routes/Blog";
 import "./index.css"; // Suppression de App.css si inutilisé
 import PresentationImage from "./components/PresentationImage";
 import LevelsMap from "./components/LevelsMap";
+import { MissionProvider } from "./context/MissionContext"; // Importation du MissionProvider
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MissionProvider>
+      {" "}
+      {/* Envelopper l'application avec MissionProvider */}
+      <RouterProvider router={router} />
+    </MissionProvider>{" "}
   </React.StrictMode>
 );
 

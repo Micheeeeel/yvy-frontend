@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import L from "leaflet";
+import { useMissionContext } from "../context/MissionContext";
 
 // Définition de l'icône du marqueur
 const defaultIcon = L.icon({
@@ -17,8 +18,8 @@ const defaultIcon = L.icon({
 });
 
 const LevelsMap = () => {
-  const initialZoom = 13;
-
+  const { filteredMissions } = useMissionContext(); // Utilise le contexte pour obtenir les missions filtrées
+  const initialZoom = 3;
   return (
     <div className="w-full h-screen p-8">
       <MapContainer
@@ -37,11 +38,17 @@ const LevelsMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Marker position={[51.505, -0.09]} icon={defaultIcon}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+        {filteredMissions.map((mission) => (
+          <Marker
+            key={mission.id}
+            position={[mission.lat, mission.lng]}
+            icon={defaultIcon}
+          >
+            <Popup>
+              {mission.title} <br /> {mission.lat}, {mission.lng}
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </div>
   );
