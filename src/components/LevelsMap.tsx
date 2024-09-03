@@ -1,7 +1,6 @@
-import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import React, { useEffect } from "react";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-// Import des images des marqueurs
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import L from "leaflet";
@@ -17,22 +16,35 @@ const defaultIcon = L.icon({
   shadowSize: [41, 41],
 });
 
+// Composant pour ajuster les limites et le zoom
+const FitBounds = ({ positions }: { positions: [number, number][] }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (positions.length === 0) return;
+
+    const bounds = L.latLngBounds(positions);
+    map.fitBounds(bounds, { padding: [50, 50] }); // Ajuste les limites avec un padding
+  }, [positions, map]);
+
+  return null;
+};
+
 const LevelsMap = () => {
-  const { filteredMissions } = useMissionContext(); // Utilise le contexte pour obtenir les missions filtrées
-  const initialZoom = 3;
+  const { filteredMissions } = useMissionContext();
+
+  // Crée un tableau de positions [latitude, longitude]
+  const positions = filteredMissions.map((mission) => [
+    mission.lat,
+    mission.lng,
+  ]) as [number, number][];
+
   return (
     <div className="w-full h-screen p-8">
       <MapContainer
         className="w-full h-full z-0"
         center={[51.505, -0.09]}
-        zoom={initialZoom}
-        maxZoom={initialZoom}
-        scrollWheelZoom={false}
-        dragging={false}
-        touchZoom={false}
-        doubleClickZoom={false}
-        boxZoom={false}
-        keyboard={false}
+        zoom={13}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -49,6 +61,9 @@ const LevelsMap = () => {
             </Popup>
           </Marker>
         ))}
+
+        {/* Composant pour ajuster les limites et le zoom */}
+        <FitBounds positions={positions} />
       </MapContainer>
     </div>
   );
