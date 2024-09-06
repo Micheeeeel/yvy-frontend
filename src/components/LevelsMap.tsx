@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import L from "leaflet";
-import { useMissionContext } from "../context/MissionContext";
+import { useMissionContext } from "../context/MissionContext"; // Import du contexte
 
 // Définition de l'icône du marqueur
 const defaultIcon = L.icon({
@@ -16,40 +16,58 @@ const defaultIcon = L.icon({
   shadowSize: [41, 41],
 });
 
-// Composant pour ajuster les limites et le zoom
-const FitBounds = ({ positions }: { positions: [number, number][] }) => {
+// Composant personnalisé pour ajuster la vue de la carte
+const FitBoundsMap = ({ bounds }: { bounds: L.LatLngBoundsExpression }) => {
   const map = useMap();
 
   useEffect(() => {
-    if (positions.length === 0) return;
-
-    const bounds = L.latLngBounds(positions);
-    map.fitBounds(bounds, { padding: [50, 50] }); // Ajuste les limites avec un padding
-  }, [positions, map]);
+    if (bounds) {
+      map.fitBounds(bounds, { padding: [50, 50], maxZoom: 16 }); // Ajuste le zoom pour englober les marqueurs
+      map.setMaxBounds(bounds); // Définit les limites maximales de la carte
+    }
+  }, [map, bounds]);
 
   return null;
 };
 
 const LevelsMap = () => {
-  const { filteredMissions } = useMissionContext();
+  const { filteredMissions } = useMissionContext(); // Utilise le contexte pour obtenir les missions filtrées
 
-  // Crée un tableau de positions [latitude, longitude]
-  const positions = filteredMissions.map((mission) => [
-    mission.lat,
-    mission.lng,
-  ]) as [number, number][];
+  // Calcul des limites et du barycentre
+  const positions = filteredMissions.map(
+    (mission) => [mission.lat, mission.lng] as [number, number]
+  );
+  const bounds = L.latLngBounds(positions);
+
+  // Calcul du centre (barycentre) des positions
+  const centerLat =
+    positions.reduce((acc, [lat]) => acc + lat, 0) / positions.length;
+  const centerLng =
+    positions.reduce((acc, [, lng]) => acc + lng, 0) / positions.length;
+  const center = [centerLat, centerLng] as L.LatLngExpression;
 
   return (
     <div className="w-full h-screen p-8">
       <MapContainer
         className="w-full h-full z-0"
-        center={[51.505, -0.09]}
+        center={center}
         zoom={13}
+        minZoom={3}
+        scrollWheelZoom={false}
+        dragging={true}
+        touchZoom={true}
+        doubleClickZoom={true}
+        boxZoom={true}
+        keyboard={true}
       >
+        {/* Ajustement de la vue pour englober tous les marqueurs */}
+        <FitBoundsMap bounds={bounds} />
+
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
+
         {filteredMissions.map((mission) => (
           <Marker
             key={mission.id}
@@ -57,13 +75,10 @@ const LevelsMap = () => {
             icon={defaultIcon}
           >
             <Popup>
-              {mission.title} <br /> {mission.lat}, {mission.lng}
+              {mission.title} <br /> {mission.country}
             </Popup>
           </Marker>
         ))}
-
-        {/* Composant pour ajuster les limites et le zoom */}
-        <FitBounds positions={positions} />
       </MapContainer>
     </div>
   );
