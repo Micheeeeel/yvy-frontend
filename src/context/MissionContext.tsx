@@ -5,13 +5,21 @@ import React, {
   useEffect,
   ReactNode,
 } from "react";
-import { fetchMissionsData, Mission } from "../services/missionService";
+import {
+  Country,
+  fetchCountries,
+  fetchFilteredMissions,
+  fetchTypes,
+  Mission,
+  Type,
+} from "../services/missionService";
 
 // Définir le type pour le contexte des missions
 interface MissionContextType {
-  missions: Mission[];
   filteredMissions: Mission[];
   filterMissions: (country: string, type: string) => void;
+  countries: Country[];
+  types: Type[];
 }
 
 // Créer le contexte avec des valeurs par défaut
@@ -21,37 +29,48 @@ const MissionContext = createContext<MissionContextType | undefined>(undefined);
 export const MissionProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [missions, setMissions] = useState<Mission[]>([]);
   const [filteredMissions, setFilteredMissions] = useState<Mission[]>([]);
+  const [countries, setCountries] = useState<Country[]>([]);
+  const [types, setTypes] = useState<Type[]>([]);
 
   useEffect(() => {
-    const loadMissions = async () => {
-      const missionsData = await fetchMissionsData();
-      setMissions(missionsData);
-      setFilteredMissions(missionsData);
+    const loadInitialData = async () => {
+      try {
+        // Charger les missions initiales
+        const missionsData = await fetchFilteredMissions("", "");
+        setFilteredMissions(missionsData);
+
+        // Charger les pays
+        const countriesData = await fetchCountries();
+        setCountries(countriesData);
+
+        // Charger les types
+        const typesData = await fetchTypes();
+        setTypes(typesData);
+      } catch (error) {
+        console.error(
+          "Erreur lors du chargement des données initiales :",
+          error
+        );
+      }
     };
 
-    loadMissions();
+    loadInitialData();
   }, []);
 
   // Fonction pour filtrer les missions
-  const filterMissions = (country: string, type: string) => {
-    let filtered = missions;
-
-    if (country) {
-      filtered = filtered.filter((mission) => mission.country === country);
+  const filterMissions = async (country: string, type: string) => {
+    try {
+      const filtered = await fetchFilteredMissions(country, type);
+      setFilteredMissions(filtered);
+    } catch (error) {
+      console.error("Erreur lors du filtrage des missions :", error);
     }
-
-    if (type) {
-      filtered = filtered.filter((mission) => mission.type === type);
-    }
-
-    setFilteredMissions(filtered);
   };
 
   return (
     <MissionContext.Provider
-      value={{ missions, filteredMissions, filterMissions }}
+      value={{ filteredMissions, filterMissions, countries, types }}
     >
       {children}
     </MissionContext.Provider>

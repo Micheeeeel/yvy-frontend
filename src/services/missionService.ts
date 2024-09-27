@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export interface Mission {
   id: string;
   title: string;
@@ -9,16 +11,31 @@ export interface Mission {
   lng: number;
 }
 
-export const fetchMissionsData = async (): Promise<Mission[]> => {
-  try {
-    const response = await fetch("/missions.json"); //  ce chemin depuis la racine suffit car le fichier est dans le dossier "public" du projet
-    if (!response.ok) {
-      throw new Error("Failed to fetch missions data");
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return [];
-  }
+export interface Country {
+  isoAlpha2: string;
+  name: string;
+}
+
+export interface Type {
+  name: string;
+}
+
+export const fetchFilteredMissions = async (
+  country: string,
+  type: string
+): Promise<Mission[]> => {
+  const response = await axios.get("http://localhost:4000/missions", {
+    params: { country, type },
+  });
+  return response.data;
+};
+
+export const fetchCountries = async (): Promise<Country[]> => {
+  const response = await axios.get("http://localhost:4000/missions/countries");
+  return response.data;
+};
+
+export const fetchTypes = async (): Promise<Type[]> => {
+  const response = await axios.get("http://localhost:4000/missions/types");
+  return response.data;
 };

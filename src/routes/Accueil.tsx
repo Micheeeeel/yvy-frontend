@@ -7,14 +7,9 @@ import SearchForm from "../components/SearchForm";
 import { useMissionContext } from "../context/MissionContext"; // Import du contexte
 
 const Accueil = () => {
-  const { filteredMissions, filterMissions, missions } = useMissionContext();
+  const { filteredMissions, filterMissions, countries, types } =
+    useMissionContext();
   const location = useLocation(); // Récupère l'emplacement actuel
-
-  // Extraire les valeurs uniques de country et type pour les options de sélection
-  const countries = Array.from(
-    new Set(missions.map((mission) => mission.country))
-  );
-  const types = Array.from(new Set(missions.map((mission) => mission.type)));
 
   return (
     <div className="max-w-screen-3xl mx-auto pt-20 pb-20 px-4">
@@ -31,8 +26,8 @@ const Accueil = () => {
       {/* Formulaire de recherche pour filtrer les missions */}
       <SearchForm
         onFilterChange={filterMissions}
-        countries={countries}
-        types={types}
+        countries={countries.map((country) => country.name)}
+        types={types.map((type) => type.name)}
       />
 
       {/* Liste des missions filtrées */}
