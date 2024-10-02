@@ -24,18 +24,18 @@ export const fetchFilteredMissions = async (
   country: string,
   type: string
 ): Promise<Mission[]> => {
-  const response = await axios.get("http://localhost:4000/missions", {
+  const response = await axios.get("https://localhost:4000/missions", {
     params: { country, type },
   });
   return response.data;
 };
 
 export const fetchCountries = async (): Promise<Country[]> => {
-  const response = await axios.get("http://localhost:4000/missions/countries");
+  const response = await axios.get("https://localhost:4000/missions/countries");
   return response.data;
 };
 
 export const fetchTypes = async (): Promise<Type[]> => {
-  const response = await axios.get("http://localhost:4000/missions/types");
+  const response = await axios.get("https://localhost:4000/missions/types");
   return response.data;
 };
