@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="w-28">
         <LogoIcon />
       </div>
-      <p>
+      <p className="text-sm">
         Copyright © {new Date().getFullYear()} - All rights reserved by Thomas
         MICHEL (future YVY DRONE).
       </p>

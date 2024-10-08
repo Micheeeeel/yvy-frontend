@@ -26,7 +26,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
 
   return (
     <div className="px-10 py-5">
-      <div className="divider divider-neutral font-bold text-4xl">MISSIONS</div>
+      <div className="divider divider-primary font-bold text-4xl">MISSIONS</div>
       <div className="mb-8 flex flex-row gap-5 justify-evenly">
         <label className="text-outline-secondary text-xl">
           Country:
