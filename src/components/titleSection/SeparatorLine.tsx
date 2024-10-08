@@ -15,7 +15,7 @@ const SeparatorLine = () => {
   // );
 
   return (
-    <div className="w-[300px] max-width: 100%">
+    <div className="w-[300px] max-width: 100% ">
       <div className="border border-primary"></div>
     </div>
   );

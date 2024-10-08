@@ -3,19 +3,15 @@ import LogoIcon from "./LogoIcon";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer footer-center bg-neutral text-secondary p-4  font-bold ">
-      <aside>
-        <div className="flex items-center justify-between gap-12">
-          <div className="w-28">
-            <LogoIcon />
-          </div>
-          <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by YVY
-            DRONE
-          </p>
-        </div>
-      </aside>
-    </footer>
+    <div className="flex flex-row justify-around aline items-center bg-neutral p-4 gap-4 text-secondary text-outline-black">
+      <div className="w-28">
+        <LogoIcon />
+      </div>
+      <p>
+        Copyright © {new Date().getFullYear()} - All rights reserved by Thomas
+        MICHEL (future YVY DRONE).
+      </p>
+    </div>
   );
 };
 

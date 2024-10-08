@@ -28,7 +28,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
     <div className="px-10 py-5">
       <div className="divider divider-neutral font-bold text-4xl">MISSIONS</div>
       <div className="mb-8 flex flex-row gap-5 justify-evenly">
-        <label>
+        <label className="text-outline-secondary text-xl">
           Country:
           <select
             className="select select-ghost w-full max-w-xs border-primary"
@@ -42,7 +42,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
             ))}
           </select>
         </label>
-        <label>
+        <label className="text-outline-secondary text-xl">
           Type:
           <select
             className="select select-ghost w-full max-w-xs border-primary"
