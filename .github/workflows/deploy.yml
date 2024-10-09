@@ -1,0 +1,22 @@
+name: CD - Deploy to VPS
+
+on:
+  repository_dispatch:
+    types: [deploy]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          passphrase: ${{ secrets.VPS_PASSPHRASE }}
+          script: |
+            cd /root/yvydrone
+            docker-compose -f docker-compose_prod.yml pull
+            docker-compose -f docker-compose_prod.yml up -d
