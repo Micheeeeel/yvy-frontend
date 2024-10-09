@@ -26,3 +26,9 @@ jobs:
         run: |
           docker build -t micheeeeel/yvydrone:yvy-frontend_V1.0 .
           docker push micheeeeel/yvydrone:yvy-frontend_V1.0
+
+      - name: Trigger Deploy Workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: deploy
