@@ -17,6 +17,6 @@ jobs:
           key: ${{ secrets.VPS_KEY }}
           passphrase: ${{ secrets.VPS_PASSPHRASE }}
           script: |
-            cd .
+            cd ~/yvydrone
             docker-compose -f docker-compose_prod.yml pull
             docker-compose -f docker-compose_prod.yml up -d
