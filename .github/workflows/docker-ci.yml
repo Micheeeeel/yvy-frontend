@@ -3,7 +3,7 @@ name: CI - Build and Push Frontend Docker Image
 on:
   push:
     branches:
-      - main
+      - trunk
 
 jobs:
   build:
