@@ -1,10 +1,10 @@
 // src/components/TopBar.jsx
-import React, { useState } from "react";
+import React from "react";
 import LogoIcon from "./LogoIcon";
 import Button from "./Button";
 import {
   ArrowRightIcon,
-  EllipsisVerticalIcon,
+  // EllipsisVerticalIcon,
 } from "@heroicons/react/24/outline";
 import "./TopBar.css";
 import { Link } from "react-router-dom";
@@ -34,19 +34,19 @@ const TopBar = () => {
       <nav className="flex justify-end items-center ml-auto pr-8 md:pr-16 lg:pr-24 xl:pr-32 space-x-8 md:space-x-16 lg:space-x-24 xl:space-x-32">
         <Link
           to={"/"}
-          className="text-white hover:underline text-xl text-outline-secondary"
+          className="text-white hover:underline text-outline-secondary text-lg sm:text-xl"
         >
           Home
         </Link>
         <Link
           to={"blog"}
-          className="text-white hover:underline text-outline-secondary text-xl"
+          className="text-white hover:underline text-outline-secondary text-lg sm:text-xl"
         >
           Blog
         </Link>
         <Link
           to={"contact"}
-          className="text-white hover:underline text-outline-secondary text-xl "
+          className="text-white hover:underline text-outline-secondary text-lg sm:text-xl "
         >
           Contact
         </Link>
