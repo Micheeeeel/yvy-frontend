@@ -29,3 +29,10 @@ code {
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter/static/Inter-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
