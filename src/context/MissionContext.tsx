@@ -32,19 +32,20 @@ export const MissionProvider: React.FC<{ children: ReactNode }> = ({
   const [filteredMissions, setFilteredMissions] = useState<Mission[]>([]);
   const [countries, setCountries] = useState<Country[]>([]);
   const [types, setTypes] = useState<Type[]>([]);
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedType, setSelectedType] = useState<string>("");
 
   useEffect(() => {
     const loadInitialData = async () => {
       try {
-        // Charger les missions initiales
+        // Charger les données initiales sans filtre
         const missionsData = await fetchFilteredMissions("", "");
         setFilteredMissions(missionsData);
 
-        // Charger les pays
+        // Charger les pays et les types initiaux
         const countriesData = await fetchCountries();
         setCountries(countriesData);
 
-        // Charger les types
         const typesData = await fetchTypes();
         setTypes(typesData);
       } catch (error) {
@@ -58,11 +59,24 @@ export const MissionProvider: React.FC<{ children: ReactNode }> = ({
     loadInitialData();
   }, []);
 
-  // Fonction pour filtrer les missions
+  // Fonction pour filtrer les missions et mettre à jour les pays et types en fonction des critères
   const filterMissions = async (country: string, type: string) => {
     try {
+      // Mettre à jour les missions filtrées
       const filtered = await fetchFilteredMissions(country, type);
-      setFilteredMissions(filtered);
+      if (filtered.length > 0) {
+        setFilteredMissions(filtered);
+
+        // Mettre à jour les pays disponibles en fonction du type sélectionné
+        const updatedCountries = await fetchCountries(type);
+        setCountries(updatedCountries);
+
+        // Mettre à jour les types disponibles en fonction du pays sélectionné
+        const updatedTypes = await fetchTypes(country);
+        setTypes(updatedTypes);
+      } else {
+        console.warn("Aucune mission trouvée.");
+      }
     } catch (error) {
       console.error("Erreur lors du filtrage des missions :", error);
     }
@@ -70,7 +84,12 @@ export const MissionProvider: React.FC<{ children: ReactNode }> = ({
 
   return (
     <MissionContext.Provider
-      value={{ filteredMissions, filterMissions, countries, types }}
+      value={{
+        filteredMissions,
+        filterMissions,
+        countries,
+        types,
+      }}
     >
       {children}
     </MissionContext.Provider>

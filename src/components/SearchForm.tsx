@@ -14,14 +14,18 @@ const SearchForm: React.FC<SearchFormProps> = ({
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [selectedType, setSelectedType] = useState<string>("");
 
+  // Met à jour les filtres lors du changement du pays
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCountry(e.target.value);
-    onFilterChange(e.target.value, selectedType);
+    const newCountry = e.target.value;
+    setSelectedCountry(newCountry);
+    onFilterChange(newCountry, selectedType); // Envoie les critères au parent
   };
 
+  // Met à jour les filtres lors du changement du type
   const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedType(e.target.value);
-    onFilterChange(selectedCountry, e.target.value);
+    const newType = e.target.value;
+    setSelectedType(newType);
+    onFilterChange(selectedCountry, newType); // Envoie les critères au parent
   };
 
   return (
@@ -33,6 +37,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
           <select
             className="select select-ghost w-full max-w-xs border-primary"
             onChange={handleCountryChange}
+            value={selectedCountry}
           >
             <option value="">All</option>
             {countries.map((country) => (
@@ -47,6 +52,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
           <select
             className="select select-ghost w-full max-w-xs border-primary"
             onChange={handleTypeChange}
+            value={selectedType}
           >
             <option value="">All</option>
             {types.map((type) => (

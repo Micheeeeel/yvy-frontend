@@ -32,12 +32,16 @@ export const fetchFilteredMissions = async (
   return response.data;
 };
 
-export const fetchCountries = async (): Promise<Country[]> => {
-  const response = await axios.get(`${API_URL}/missions/countries`);
+export const fetchCountries = async (type: string = ""): Promise<Country[]> => {
+  const response = await axios.get(`${API_URL}/missions/countries`, {
+    params: { type }, // Ajoute le type comme paramètre de requête
+  });
   return response.data;
 };
 
-export const fetchTypes = async (): Promise<Type[]> => {
-  const response = await axios.get(`${API_URL}/missions/types`);
+export const fetchTypes = async (country: string = ""): Promise<Type[]> => {
+  const response = await axios.get(`${API_URL}/missions/types`, {
+    params: { country }, // Ajoute le pays comme paramètre de requête
+  });
   return response.data;
 };
